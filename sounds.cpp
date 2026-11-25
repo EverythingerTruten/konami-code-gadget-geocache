@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include "sounds.h"
-// Definicja nut
+// Note definition
 
 const int NOTE_A4 = 440;
 const int NOTE_B4 = 494;
@@ -18,7 +18,7 @@ const int NOTE_Gs5 = 831;
 const int NOTE_As5 = 932;
 const int REST = 0;   // cisza
 
-//Kontrola tempa, pozwala na zmianę BPM
+//Tempo / BPM controls
 int standardBPM = 240;
 int helldiversBPM = 220;
 int gradiusBPM = 500;
@@ -31,20 +31,20 @@ int half(int bpm){
     return 120000 / bpm;
 }
 
-//Funkcja helper
+//Helper function
 
 void playTone(int frequency, int duration, int BuzzerPin) {
     if (frequency == REST) {
-        delay(duration); //Cisza przez długość nuty
+        delay(duration);
     }   else {
         tone(BuzzerPin, frequency, duration);
-        delay(duration * 1.3); // odstęp między nutami
+        delay(duration * 1.3); // delay between notes
     }
 }
 
 
 
-//Funkcje audio
+//Audio functions
 
 void keySuccess(int BuzzerPin){
     playTone(NOTE_B4, quarter(standardBPM), BuzzerPin);
