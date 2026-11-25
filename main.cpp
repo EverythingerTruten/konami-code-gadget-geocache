@@ -110,7 +110,7 @@ void startLatch() {
   latchActive = true;
   latchStart = millis();
   Serial.printf("[%lu ms] *** KONAMI CODE ACCEPTED - latch HIGH ***\n", latchStart);
-  delay(2000); //Żeby zamek miał czas się otworzyć
+  delay(2000); //So the latch has time to open
 }
 
 void startEasterEgg() {
