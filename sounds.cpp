@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include "sounds.h"
-// Note definition
+// Define notes
 
 const int NOTE_A4 = 440;
 const int NOTE_B4 = 494;
