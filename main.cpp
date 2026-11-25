@@ -41,10 +41,10 @@ struct Sequence {
 };
 
 // up, up, down, down, left, right, left, right, b, a
-const Button KONAMI[] = {
+const Button KONAMI[] = { //You need to enter the konami code to open the latch
   UP, UP, DOWN, DOWN, LEFT, RIGHT, LEFT, RIGHT, BTN_B, BTN_A
 };
-const Button EGG_SEQ[] = {
+const Button EGG_SEQ[] = { //This is a small easter egg where the buzzer plays the Helldivers 2 theme if you input ↑→↓↓↓
   UP, RIGHT, DOWN, DOWN, DOWN
 };
 
